@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristina Marroquín - Contadora Pública</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #023B57; /* Azul rey */
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        header h1 {
+            font-family: 'Courier New', Courier, monospace; /* Modesta */
+            margin: 0;
+            font-style: italic;
+        }
+        header p {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #023B57; /* Azul rey */
+            padding: 0.5em 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #7ED957; /* Verde */
+        }
+        .tab-content {
+            display: none;
+            padding: 2em;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-content h2 {
+            color: #7ED957;
+        }
+        .highlight h3 {
+            color: #7ED957; /* Verde */
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #7ED957; /* Verde */
+            color: dark blue;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: blue;
+            font-size: 1.2em;
+        }
+        .social-links a:hover {
+            color: #023B57; /* Azul rey */
+        }
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+        #logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .file-input-container {
+            margin-top: 20px;
+        }
+        .file-input {
+            padding: 10px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function showTab(event, tabId) {
+            var tabContents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            document.getElementById(tabId).classList.add('active');
+            var navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(function(link) {
+                link.style.backgroundColor = '';
+            });
+            event.currentTarget.style.backgroundColor = '#023B57'; /* Lighten background for active tab */
+        }
+    </script>
+</head>
+<body onload="showTab(event, 'sobre-mi')">
+    <header>
+        <img id="logo" src="logo.png" alt="Logo de Cristina Marroquín">
+        <h1>Cristina Marroquín</h1>
+        <p>Contadora Pública</p>
+    </header>
+    <nav>
+        <a onclick="showTab(event, 'sobre-mi')">Sobre Mí</a>
+        <a onclick="showTab(event, 'servicios')">Servicios</a>
+        <a onclick="showTab(event, 'clientes')">Clientes</a>
+        <a onclick="showTab(event, 'contacto')">Contáctanos</a>
+        <a onclick="showTab(event, 'trabaja-con-nosotros')">Trabaja con Nosotros</a>
+    </nav>
+    <section id="sobre-mi" class="tab-content active">
+        <h2>Sobre Mí</h2>
+        <p>Hola, Soy Cristina Marroquín, contadora
+pública especializada en diagnóstico y análisis organizacional para unidades productivas. Con 6 años de experiencia en los sectores de servicios, manufactura, comercio y construcción, estoy comprometida con la excelencia contable, el éxito empresarial y la sostenibilidad ambiental. Mi enfoque innovador y sostenible en contabilidad ayuda a las empresas no solo a optimizar su gestión financiera, sino también a minimizar su impacto ecológico y a cumplir con los más altos estándares de responsabilidad social y ambiental.</p>
+        <h3 class="highlight">Misión</h3>
+        <p>Ofrecer soluciones contables integrales que no solo optimicen la gestión financiera y garanticen el éxito empresarial de mis clientes,sino que también promuevan prácticas sostenibles y contribuyan positivamente al medio ambiente.</p>
+        <h3 class="highlight">Visión</h3>
+        <p>Ser en 2027 la empresa líder en soluciones contables integrales, especializada en la gestión sostenible para comerciantes y microempresas del sector servicios y comercial, reconocida por su compromiso con la excelencia financiera y el impacto positivo en el medio ambiente.</p>
+        <h3 class="highlight">Valores Corporativos</h3>
+        <ul>
+            <li>Excelencia: Comprometidos con la más alta calidad en cada aspecto de nuestro trabajo, buscamos constantemente la mejora continua y la superación de las expectativas de nuestros clientes.</li>
+            <li>Integridad: Operar con honestidad y transparencia en todas nuestras prácticas contables, asegurando que nuestros clientes siempre reciban información precisa y confiable.</li>
+            <li>Sostenibilidad: Promover prácticas contables y empresariales que respeten y protejan el medio ambiente, contribuyendo a un futuro más verde y sostenible..</li>
+            <li>Innovación: Implementar tecnologías avanzadas y enfoques creativos para optimizar la gestión financiera y contable de nuestros clientes, mejorando continuamente nuestros servicios.</li>
+            <li>Colaboración: Trabajar estrechamente con nuestros clientes, empleados y socios para lograr objetivos comunes y construir relaciones duraderas basadas en la confianza y el respeto mutuo.</li>
+            <li>Responsabilidad social: Fomentar un impacto positivo en la comunidad a través de nuestras acciones y decisiones, apoyando iniciativas y proyectos que beneficien a la sociedad.</li>      
+</ul>
+    </section>
+    <section id="servicios" class="tab-content">
+        <h2>Servicios</h2>
+        <h3 class="highlight">Soluciones Ágiles</h3>
+        <p>Soluciones enfocadas en ciclos cortos de desarrollo y entrega del servicio, centradas en las necesidades especificas del cliente.</p>
+        <h3 class="highlight">Asesorías</h3>
+        <p>Brindamos asesorías personalizadas para ayudarte a optimizar tus procesos contables y fiscales.</p>
+        <h3 class="highlight">Consultorías</h3>
+        <p>Nuestro equipo de expertos te ofrece consultorías detalladas para mejorar la gestión financiera de tu empresa.</p>
+        <h3 class="highlight">Outsourcing</h3>
+        <p>Nos encargamos de todas tus necesidades contables a través de nuestro servicio de outsourcing, permitiéndote ahorrar tiempo y recursos.</p>
+        <h3 class="highlight">Cómo lo Hago</h3>
+        <p>Mi enfoque se basa en la precisión, eficiencia y personalización. Trabajo estrechamente con mis clientes para entender sus necesidades específicas y proporcionar soluciones adaptadas a sus requerimientos financieros.</p>
+    </section>
+    <section id="clientes" class="tab-content">
+        <h2>Clientes</h2>
+        <p>He trabajado con una amplia gama de clientes en diversos sectores, incluyendo empresas comerciales, de servicios, de construcción y manufactureras. Mi experiencia me permite ofrecer un servicio integral y adaptado a cada sector.</p>
+    </section>
+    <section id="contacto" class="tab-content">
+        <h2>Contáctanos</h2>
+        <p>Para más información o para solicitar una consulta, envíame un mensaje directamente a través de WhatsApp: 
+            <a href="https://wa.me/1234567890?text=Hola,%20quiero%20recibir%20más%20información%20sobre%20tus%20servicios" target="_blank">WhatsApp</a>.</p>
+        <p>Horario de atención: Lunes a viernes de 8:00 AM a 12:30 PM y de 2:00 PM a 5:00 PM.</p>
+    </section>
+    <section id="trabaja-con-nosotros" class="tab-content">
+        <h2>Trabaja con Nosotros</h2>
+        <p> Si deseas unirte a nuestro equipo, por favor, envía tu hoja de vida utilizando el siguiente botón:</p>
+        <div class="file-input-container">
+            <input type="file" id="file-input" class="file-input" />
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Cristina Marroquín. Todos los derechos reservados.</p>
+         <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+        </div>
+    </footer>
+</body>
+</html>
